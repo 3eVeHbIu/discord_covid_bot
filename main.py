@@ -37,11 +37,11 @@ class MyClient(discord.Client):
             await message.channel.send(text)
             # Выводи в чат статистику по России
 
-        elif message.content.startswith('$country+'):
-            api = CovId19Data(force=False)
-            country = message[message.index('+') + 1:]
-            try:
-                res = api.filter_by_country()
+#        elif message.content.startswith('$country+'):
+#            api = CovId19Data(force=False)
+#            country = message[message.index('+') + 1:]
+#            try:
+#                res = api.filter_by_country()
             # Выводит статистику страны указанной после команды $country
 
     async def on_disconect(self):
