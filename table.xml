@@ -1060,7 +1060,7 @@
 	<country>
 		<name>Конго</name>
 		<fullname>Республика Конго</fullname>
-		<english>Congo</english>
+		<english>Congo (Brazzaville)</english>
 		<alpha2>CG</alpha2>
 		<alpha3>COG</alpha3>
 		<iso>178</iso>
@@ -1071,7 +1071,7 @@
 	<country>
 		<name>Конго, Демократическая Республика</name>
 		<fullname>Демократическая Республика Конго</fullname>
-		<english>Congo, Democratic Republic of&#160;the</english>
+		<english>Congo (Kinshasa)</english>
 		<alpha2>CD</alpha2>
 		<alpha3>COD</alpha3>
 		<iso>180</iso>
@@ -1086,17 +1086,6 @@
 		<alpha2>KP</alpha2>
 		<alpha3>PRK</alpha3>
 		<iso>408</iso>
-		<location>Азия</location>
-		<location-precise>Восточная Азия</location-precise>
-	</country>
-
-	<country>
-		<name>Корея, Республика</name>
-		<fullname>Республика Корея</fullname>
-		<english>Korea, Republic&#160;of</english>
-		<alpha2>KR</alpha2>
-		<alpha3>KOR</alpha3>
-		<iso>410</iso>
 		<location>Азия</location>
 		<location-precise>Восточная Азия</location-precise>
 	</country>
@@ -1885,7 +1874,7 @@
 	<country>
 		<name>Россия</name>
 		<fullname>Российская Федерация</fullname>
-		<english>Russian Federation</english>
+		<english>Russia</english>
 		<alpha2>RU</alpha2>
 		<alpha3>RUS</alpha3>
 		<iso>643</iso>
@@ -2116,9 +2105,9 @@
 	</country>
 
 	<country>
-		<name>Сирийская Арабская Республика</name>
+		<name>Сирийская Арабская Республика, Сирия</name>
 		<fullname> </fullname>
-		<english>Syrian Arab Republic</english>
+		<english>Syrian Arab Republic, Syria</english>
 		<alpha2>SY</alpha2>
 		<alpha3>SYR</alpha3>
 		<iso>760</iso>
@@ -2149,7 +2138,7 @@
 	</country>
 
 	<country>
-		<name>Соединенное Королевство</name>
+		<name>Соединенное Королевство Великобритании</name>
 		<fullname>Соединенное Королевство Великобритании и&#160;Северной Ирландии</fullname>
 		<english>United Kingdom</english>
 		<alpha2>GB</alpha2>
@@ -2256,9 +2245,9 @@
 	</country>
 
 	<country>
-		<name>Тайвань (Китай)</name>
+		<name>Тайвань</name>
 		<fullname> </fullname>
-		<english>Taiwan, Province of&#160;China</english>
+		<english>Taiwan, Taiwan*</english>
 		<alpha2>TW</alpha2>
 		<alpha3>TWN</alpha3>
 		<iso>158</iso>
@@ -2575,9 +2564,9 @@
 	</country>
 
 	<country>
-		<name>Чешская Республика</name>
+		<name>Чешская Республика, Чехия</name>
 		<fullname> </fullname>
-		<english>Czech Republic</english>
+		<english>Czech Republic, Czechia</english>
 		<alpha2>CZ</alpha2>
 		<alpha3>CZE</alpha3>
 		<iso>203</iso>
@@ -2784,4 +2773,3 @@
 	</country>
 
 </country-list>
-

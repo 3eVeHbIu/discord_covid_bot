@@ -1,4 +1,5 @@
 import xml.dom.minidom as minidom
+from covid.api import CovId19Data
 
 
 def get_country_dict(xml):
@@ -20,10 +21,15 @@ def get_country_dict(xml):
             nodes = record[i].childNodes
             for node in nodes:
                 if node.nodeType == node.TEXT_NODE:
-                    collection.append(node.data)
+                    data = node.data
+                    if ',' in data:
+                        for item in data.split(', '):
+                            collection.append(item)
+                    else:
+                        collection.append(data)
         answer.append(collection)
     return answer
 
 
 document = 'table.xml'
-print(*get_country_dict(document), sep='\n')
+table = get_country_dict(document)

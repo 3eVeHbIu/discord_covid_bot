@@ -1,6 +1,15 @@
 from settings import BOT_TOKEN, INFO
 from covid.api import CovId19Data
+from country import table
 import discord
+
+
+def get_text(stats, text):
+    return '''На дату {0}, {1}:
+{2[confirmed]} заразившихся:sneezing_face:,
+{2[recovered]} выздоровевших:sweat_smile:,
+{2[deaths]} умерших.:skull_crossbones:
+Последние обновление информации производилось в {3}'''.format(stats['last_updated'][:10], text, stats, stats['last_updated'][10:])
 
 
 class MyClient(discord.Client):
@@ -20,28 +29,31 @@ class MyClient(discord.Client):
         elif message.content.startswith('шо там в мире?') or message.content.startswith('$world'):
             api = CovId19Data(force=False)
             res = api.get_stats()
-            text = '''На дату {0}, во всем мире:
-{1[confirmed]} заразившихся:sneezing_face:,
-{1[recovered]} выздоровевших:sweat_smile:,
-{1[deaths]} умерших.:skull_crossbones:'''.format(res['last_updated'][:10], res)
-            await message.channel.send(text)
+            await message.channel.send(get_text(res, 'во всем мире'))
             # Выводи в чат статистику по миру
 
-        elif message.content.startswith('Как там родина моя?') or message.content.startswith('$Russia'):
+        elif message.content.startswith('Как там родина моя?') or message.content.startswith('$russia'):
             api = CovId19Data(force=False)
             res = api.filter_by_country('Russia')
-            text = '''На дату {0}, в Россие:
-{1[confirmed]} заразившихся:sneezing_face:,
-{1[recovered]} выздоровевших:sweat_smile:,
-{1[deaths]} умерших.:skull_crossbones:'''.format(res['last_updated'][:10], res)
-            await message.channel.send(text)
+            await message.channel.send(get_text(res, 'в России'))
             # Выводи в чат статистику по России
 
-#        elif message.content.startswith('$country+'):
-#            api = CovId19Data(force=False)
-#            country = message[message.index('+') + 1:]
-#            try:
-#                res = api.filter_by_country()
+        elif message.content.startswith('$country'):
+            api = CovId19Data(force=False)
+            country = message.content[9:].lower()
+            available = api.show_available_countries()
+            flag = True
+            for collection in table:
+                if country in map(lambda i: i.lower(), collection):
+                    for item in collection:
+                        if item in available:
+                            res = api.filter_by_country(item)
+                            flag = False
+                            await message.channel.send(get_text(res, 'в стране - {}'.format(collection[0])))
+                            break
+                    break
+            if flag:
+                await message.channel.send('К сожалению такой страны нет в базе данных')
             # Выводит статистику страны указанной после команды $country
 
     async def on_disconect(self):
