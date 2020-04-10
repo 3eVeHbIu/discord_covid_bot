@@ -10,11 +10,11 @@
 
 Для создания бота перейдите по [ссылке](https://discordapp.com/developers/applications). Далее необходимо нажать на **New Application**, и указать имя нашего приложения.
 
-![/images/1.png](https://github.com/sergo2048/discord_covid_bot/tree/master/images/create.png)
+![/images/1.png](https://raw.githubusercontent.com/sergo2048/discord_covid_bot/master/images/create.png)
 
 Создав приложение, необходимо создать самого *бота*. Для этого переходим в раздел **bot**, указываем имя бота, а так же, ниже, выбираем его *права*.
 
-![/images/1.png](https://github.com/sergo2048/discord_covid_bot/tree/master/images/bot_creation.png)
+![/images/1.png](https://raw.githubusercontent.com/sergo2048/discord_covid_bot/master/images/bot_creation.png)
 
 По сути бот готов. Копируем его **TOKEN** и сохраняем в отдельный файл (у меня это *settings.py* ~~тут показывать не буду~~). Потом мы будем импортировать этот *токен* в основную программу для подключения.
 
@@ -22,12 +22,12 @@
 
 > **НЕ ДАВАЙТЕ БОТУ БОЛЬШЕ ПРАВ ЧЕМ ТРЕБУЕТ ЕГО ФУНКЦИОНАЛ**
 
-![/images/1.png](https://github.com/sergo2048/discord_covid_bot/tree/master/images/add.png)
-![/images/1.png](https://github.com/sergo2048/discord_covid_bot/tree/master/images/permission.png)
+![/images/1.png](https://raw.githubusercontent.com/sergo2048/discord_covid_bot/master/images/add.png)
+![/images/1.png](https://raw.githubusercontent.com/sergo2048/discord_covid_bot/master/images/permission.png)
 
 После всего этого просто копируем сгенерированную ссылку, переходим по ней и выбираем канал, на который мы хоти добавить бота.
 
-![/images/1.png](https://github.com/sergo2048/discord_covid_bot/tree/master/images/conected.png)
+![/images/1.png](https://raw.githubusercontent.com/sergo2048/discord_covid_bot/master/images/conected.png)
 
 Если вы все сделали правильно, то бот должен был присоединиться к каналу.
 
@@ -43,7 +43,7 @@
 
 Зная это вы спокойно сможете использовать моего бота.
 
-![/images/1.png](https://github.com/sergo2048/discord_covid_bot/tree/master/images/small.png)
+![/images/1.png](https://raw.githubusercontent.com/sergo2048/discord_covid_bot/master/images/small.png)
 
 
 <h2 id='settings'> Настройка </h2>
